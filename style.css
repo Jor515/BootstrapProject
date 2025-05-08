@@ -84,38 +84,21 @@
   section {
     padding: 2rem 0;
   }
-  
+
   h2 {
     font-size: 2rem;
     color: var(--primary-color);
     text-align: center;
     margin-bottom: 1rem;
+    margin-top: 2rem;
   }
   
   .carousel {
-    display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
-    margin-left: 8rem;
-    max-width: 75%;
-    max-height: 100%;
-  }
-  
-  .carousel img {
+    max-width: 70%;
     width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin-bottom: 0.5rem;
+    margin: 0 auto;
   }
   
-  .carousel:hover {
-    background-color: #f0f0f0;
-    transform: translateY(-2px);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    border: 2px dashed rgb(79, 9, 243);
-  }
-
   .skills iframe {
     width: 100%;
     height: 300px;
@@ -123,43 +106,29 @@
     border-radius: 8px;
     margin-top: 1rem;
   }
-  
-  .info-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
+
+  .card img {
+    width: 100%;
+    max-width: 25%;
     margin-top: 1rem;
+    margin: 0 auto;
   }
   
-  .info-card {
-    background: #fff;
-    border: 2px solid var(--primary-color);
-    border-radius: 50%;
-    padding: 1rem;
-    text-align: center;
+  .card:hover {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .info-card img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 0.5rem;
+    text-decoration: underline;
+    transform: translateY(-2px);
   }
 
-  .info-card:hover {
-    background-color: #f0f0f0;
-    transform: translateY(-2px);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    border: 2px dashed rgb(79, 9, 243);
+  .text-center {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
-  
+
   .footer {
     background: #161619;
     color: #fff;
-    padding: 2rem 0;
+    padding: 1rem 0;
+    margin-top: 2fr;
   }
   
   .footer-content {
@@ -172,7 +141,7 @@
   .footer-content > div {
     flex: 1 1 200px;
     text-align: center;
-    margin: 0.5rem;
+    margin: 0.1rem;
 }
 
   .footer-content img {
@@ -195,26 +164,29 @@
     margin-top: 1rem;
 }
 
+.social-icons img:hover {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
   .social-icons img {
     width: 30px;
 }
 
-.carousel-inner img {
-
-}
   @media (max-width: 768px) {
     .hero-content { flex-direction: column; }
     .hero-text h1 { font-size: 2rem; }
+    .hero-image img { margin-top: -10rem;}
     .menu a { margin-left: 0.5rem; }
-    .carousel { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
-    .carousel {margin-left: 3.5rem;}
+    .card img {margin-left: 5rem;}
+    
 }
 
   @media (max-width: 480px) {
     .nav-content { flex-direction: column; }
     .hero-text h1 { font-size: 1.5rem; }
     .subtitle { font-size: 0.9rem; }
-    .carousel, .info-cards { grid-template-columns: 1fr; }
+    .cards { grid-template-columns: 1fr; }
     .menu a { margin: 0.5rem 0; }
-    .carousel {margin-left: 3.5rem;}
+
 }

@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbar-example2">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
   
   <header class="navbar">
@@ -29,6 +29,10 @@
             <li class="nav-item">
               <a class="nav-link" href="#gallery">Galeria de Fotos</a>
             </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#more-info">Mas Información</a>
+          </li>
           </ul>
         </div>
       </div>
@@ -50,8 +54,7 @@
   <section id="about" class="about">
     <div class="container">
       <h2>Cosas sobre mí y mis otras habilidades</h2>
-      <p>Me llamo Jorge Zapatero, tengo 21 años, me gusta mucho la tecnología y deseo aprender mucho más de lo que sé actualmente. Soy técnico en Administración de Sistemas y Redes y estudiante de la UTN FRRe cursando 2° año de Ingeniería en Sistemas.</p>
-    <div class="d-flex justify-content-start">
+      <p>Me llamo Jorge Zapatero, tengo 21 años, me gusta mucho la tecnología y deseo aprender mucho más de lo que sé actualmente. Soy estudiante de la UTN FRRe cursando 2° año de Ingeniería en Sistemas.</p>
       <div class="cards">
         <div id="carouselExampleCaptions" class="carousel slide">
           <div class="carousel-indicators">
@@ -91,14 +94,13 @@
             <span class="visually-hidden">Siguiente</span>
           </button>
         </div>
-    </div>
-   </div>
+      </div>
     </div>
   </section>
 
   <section id="skills" class="skills">
     <div class="container">
-      <h2>Mi ciudad actual </h2>
+      <h2>Mi ciudad actual</h2>
       <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113262.55411050361!2d-58.874788870563215!3d-27.486227388718653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94456b79d5bed36b%3A0xfa999f1ef3b40646!2sCorrientes!5e0!3m2!1ses-419!2sar!4v1745725846115!5m2!1ses-419!2sar" 
         frameborder="0" allowfullscreen loading="lazy"></iframe>
@@ -107,16 +109,21 @@
 
   <section id="gallery" class="gallery">
     <h2>Galeria de Imágenes</h2>
+  <div class="container-fluid">
+  <div class="d-flex justify-content-start">
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="assets/card_img4.jpg" class="d-block w-100" alt="card_img4">
+          <p class="text-center"> Edición de imágenes con Photoshop</p>
         </div>
         <div class="carousel-item">
           <img src="assets/card_img5.jpg" class="d-block w-100" alt="card_img5">
+          <p class="text-center"> Edición 3d con Autodesk 3ds Max</p>
         </div>
         <div class="carousel-item">
           <img src="assets/card_img6.jpg" class="d-block w-100" alt="card_img6">
+          <p class="text-center"> Edición de videos con Sony VEGAS</p>
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -128,25 +135,39 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+    </div>
+    </div>
   </section>
 
   <section id="more-info" class="more-info">
-    <div class="container info-cards">
-      <div class="info-card">
-        <img src="assets/icon_econ.svg" alt="Economía">
-        <p>Otros gustos: La Economía</p>
+    <h2>Mas Información</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card">
+          <img src="assets/icon_cert.svg" class="card-img-top" alt="icon_cert">
+          <div class="card-body">
+            <h5 class="card-title">Otros Títulos</h5>
+            <p class="card-text">Téc. Superior en Administración de Sistemas y Redes.</p>
+          </div>
+        </div>
       </div>
-      <div class="info-card">
-        <img src="assets/icon_idioma.svg" alt="Inglés">
-        <p>Nivel de inglés: Intermedio</p>
+      <div class="col">
+        <div class="card">
+          <img src="assets/icon_idioma.svg" class="card-img-top" alt="icon_idioma">
+          <div class="card-body">
+            <h5 class="card-title">Otros Idiomas</h5>
+            <p class="card-text">Tengo un nivel medio-alto en Ingles.</p>
+          </div>
+        </div>
       </div>
-      <div class="info-card">
-        <img src="assets/icon_cert.svg" alt="Certificación">
-        <p>Otros estudios: Técnico en Administración de Sistemas y Redes</p>
-      </div>
-      <div class="info-card">
-        <img src="assets/icon_mt.svg" alt="Matemáticas">
-        <p>Materia favorita: Análisis Matemático</p>
+      <div class="col">
+        <div class="card">
+          <img src="assets/icon_mt.svg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Materia Favorita</h5>
+            <p class="card-text">Mi materia favorita es Analisís Matemático I.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -171,10 +192,10 @@
           <li>Institución: Folcademy</li>
         </ul>
         <div class="social-icons">
-          <a href="https://www.facebook.com/profile.php?id=100006659388822"><img src="assets/facebook_icon.svg" alt="Facebook"></a>
-          <a href="mailto:jorgezapashop@hotmail.com"><img src="assets/email_icon.svg" alt="Email"></a>
-          <a href="https://www.canva.com/design/DAF5tuAYefw/QBQc0pUDmx_fw9QMpOurBQ/view"><img src="assets/button-cv.svg" alt="Currículum"></a>
-          <a href="https://www.instagram.com/jorge_zapakg/"><img src="assets/instagram_icon.svg" alt="Instagram"></a>
+          <a href="mailto:jorgezapashop@hotmail.com"><img src="assets/email_icon.svg" alt="Email" title="Email"></a>
+          <a href="https://www.canva.com/design/DAF5tuAYefw/QBQc0pUDmx_fw9QMpOurBQ/view"><img src="assets/button-cv.svg" alt="Currículum" title="Curriculum"></a>
+          <a href="https://www.facebook.com/profile.php?id=100006659388822"><img src="assets/facebook_icon.svg" alt="Facebook" title="Facebook"></a>
+          <a href="https://www.instagram.com/jorge_zapakg/"><img src="assets/instagram_icon.svg" alt="Instagram" title="Instagram"></a>
         </div>
       </div>
     </div>
